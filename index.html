@@ -35,6 +35,7 @@ body {
 <title>Bachelor Relationships</title>
 <header>Bachelor Entanglements Visualized</header>
 <header class="smaller"> Zoom out or scroll around!</header>
+<body>
 <svg width="4200" height="4500"></svg>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
@@ -92,7 +93,7 @@ d3.json("https://raw.githubusercontent.com/emily2h/rel_vis2/main/sample.json", f
       .attr('y', 0);
 
   node.append("title")
-      .text(function(d) { return d.id; });
+      .text(function(d) { return d.id + ", " + d.group; });
 
   simulation
       .nodes(graph.nodes)
@@ -134,4 +135,6 @@ function dragended(d) {
 
 </script>
 
-<body>Used D3.js and <a href="https://bl.ocks.org/heybignick/3faf257bbbbc7743bb72310d03b86ee8"> this post</a>.</body>
+Used D3.js and <a href="https://bl.ocks.org/heybignick/3faf257bbbbc7743bb72310d03b86ee8"> this post</a>.
+
+</body>
