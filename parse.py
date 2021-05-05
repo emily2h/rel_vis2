@@ -52,8 +52,8 @@ def write_json(df, df_alt):
 
 
 def main():
-	df = pd.read_csv("rel_full.csv")
-	df_alt = pd.read_csv("rel_alt.csv")
+	df = pd.read_csv("data/rel_full.csv")
+	df_alt = pd.read_csv("data/rel_alt.csv")
 	write_json(df, df_alt)
 
 if __name__ == '__main__':
